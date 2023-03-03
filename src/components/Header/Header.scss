@@ -1,0 +1,52 @@
+@import "../../styles/variables.scss";
+
+header.todo {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+  padding: 2px;
+
+  .title { 
+    text-transform: uppercase;
+    font-family: $title-font;
+
+    @include breakpoint-small {
+      font-size: 25px;
+    }
+
+    @include breakpoint-large{
+      font-size: 35px;
+    }
+    svg {
+      color: $secondary-color;
+      margin-right: 5px;
+      margin-bottom: -5px;
+  
+      @include breakpoint-small {
+        font-size: 30px;
+      }
+  
+      @include breakpoint-large{
+        font-size: 40px;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .author {
+    font-family: $title-font;
+    color: $secondary-text-color;
+    margin-left: auto;
+
+    @include breakpoint-small {
+      font-size: 15px;
+    }
+
+    @include breakpoint-large {
+      font-size: 20px;
+    }
+  }
+}

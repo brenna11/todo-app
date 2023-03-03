@@ -1,0 +1,27 @@
+$title-font: 'Josefin Sans', sans-serif;
+$text-font: 'Manrope', sans-serif;
+$primary-color: #635985;
+$secondary-color: #393053;
+$text-color: #EEE9DA;
+$secondary-text-color: #F8EAD8;
+$danger-color: #CC3636;
+$success-color: #A4BE7B;
+
+
+@mixin breakpoint($min-width) {
+   @media only screen and (min-width: $min-width) {
+      @content;
+   }
+}
+
+@mixin breakpoint-small {
+   @include breakpoint(360px) {
+      @content;
+   }
+}
+
+@mixin breakpoint-large {
+   @include breakpoint(1200px) {
+      @content;
+   }
+}
